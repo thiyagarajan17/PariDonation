@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pari</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/status.css" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="icon" href="./assets/icon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <ul class="topnav" id="navbar">
+        <h5 href="#" style="font-family:samarkhan; font-weight: 400; font-size: 50px;">Pari</h5>
+        <li style="margin-right: 30px;"><a>Contact Us</a></li>  
+        <li><a href="./index.html#about">About Us</a></li>
+    </ul>
+
+    <div>
+        <button class="button"
+            style="border-radius: 55%; width:70px;height:70px;position:fixed;right:3%;bottom:15%;padding-right: 32px;padding-left: 28px;background-color: tomato; z-index: 1;"><i
+                class="fas fa-phone"></i></button>
+    </div>
+
+    <div class="container">
+        <div style="text-align:center;height:90%;">
+            <div
+                style="vertical-align: middle; width:100%;float:left;margin-top:90px;margin-bottom:150px;border-radius: 10px;">
+                <div style="display: inline-block;margin-top: 5%;margin-bottom: 5%;">
+                    <p style="font-size:35px;">Admin Login</p>
+                    <form name="loginForm" method="post" action="admin.php"
+                        style="margin-bottom: 0px;text-align: left;margin-top: 50px;">
+                        <label for="donationid"
+                            style="text-align: left;display: inline-block;width: 200px;font-size:23px;height:30px;">Admin
+                            ID<span style="color: red">*</span></label>
+                        <input type="text"
+                            style="display: inline-block;background-color: #FFF;height: 30px;width: 200px;height:30px;border: 2px solid tomato;"
+                            name="adminid" id="adminid" required>
+                        <br>
+                        <br>
+                        <label for="password"
+                            style="display: inline-block;width: 200px;font-size:23px;height:30px;text-align: left;">Password
+                            <span style="color: red;text-align: left;">*</span></label>
+                        <input type="password"
+                            style="display: inline-block;background-color: #FFF;height: 30px;width: 200px;height:30px;border: 2px solid tomato;"
+                            name="password" id="password" required>
+                    </form>
+                    <br>
+                    <br>
+                    <button class="button" onclick="submitForm();">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div style="width: 40%;float:left; color: white;height: 100%;margin-left: 10%;position: relative;">
+                <h2
+                    style="font-family: 'Roboto';font-weight: 400;letter-spacing: 2px;margin-bottom: 25px;margin-top: 25px;">
+                    Made with <span class="fas fa-heart" id="love"></span> by Abhinav and Rohith</h2>
+            </div>
+            <div style="width: 40%;float: right;color: white;height: 100%;margin-right: 10%;">
+                <ul style="float: right;align-items: center;">
+                    <li class="socialhover" style="display:inline-block;margin: 0 3px; ">
+                        <a href="#" class="socialhover">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="socialhover" style="display:inline-block;margin: 0 3px; ">
+                        <a href="#" class="socialhover">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="socialhover" style="display:inline-block;margin: 0 3px;">
+                        <a href="#" class="socialhover">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </li>
+                    <li class="socialhover" style="display:inline-block;margin: 0 3px;">
+                        <a href="#" class="socialhover">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+<script>
+    function submitForm() {
+        var admin = document.getElementById("adminid");
+        var donation = document.getElementById("password");
+        if (admin.value !== "" & password.value !== "") {
+            document.forms['loginForm'].submit();
+        } else {
+            alert("Please fill all the fields.");
+        }
+
+    }
+</script>
+
+</html>
